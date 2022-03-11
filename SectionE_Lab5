@@ -1,0 +1,57 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Student {
+	int roll;
+	char gender;
+	double gpa;
+	string *courses;
+
+public:
+	Student(int roll, int sizeOfCourses) {
+		this->roll = roll;
+		this->courses = new string[sizeOfCourses];
+	}
+
+	~Student() {
+		delete[] courses;
+	}
+
+	Student(int roll, char gender) {
+		this->roll = roll;
+
+	}
+
+	void setRoll(int inputRoll) {
+		this->roll = inputRoll;
+	}
+
+	int getRoll() {
+		return roll;
+	}
+};
+
+
+int fin(int n) {
+	if (n <= 1) {
+		return n;
+	}
+	return fin(n - 1) + fin(n - 2);
+}
+
+void printList(int *arr, int size) {
+	static int i = 0;
+	if (i >= size) {
+		return;
+	}
+	cout << arr[i];
+	i++;
+	printList(arr, size);
+}
+
+
+
+int main() {
+	Student a(10, 5);
+}
