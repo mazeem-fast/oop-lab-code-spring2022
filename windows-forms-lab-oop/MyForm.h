@@ -267,6 +267,14 @@ namespace Project4 {
 				   this->student_list_view->Items[i]->SubItems->Add("" + data[i].GetRollNumber());
 				   this->student_list_view->Items[i]->SubItems->Add("" + data[i].GetMarks());*/
 				   this->student_list_view->Items->Add(list_view_item);
+				   
+				   /*
+				   * Can also be done by creating a ListViewItem object and adding content to its subitems like:
+				   * ListViewItem^ item = gcnew ListViewItem();
+				   * item->Text = "NAME"; //First column
+				   * item->SubItems->Add("" + data[i].GetRollNumber());
+				   * this->student_list_view->Items->Add(item);
+				   */
 			   }
 			   this->student_list_view->Refresh();
 		   }
