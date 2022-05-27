@@ -259,14 +259,9 @@ namespace Project4 {
 		   void LoadDataFromList() {
 			   Student* data = student_store->GetStudentList();
 			   for (int i = 0; i < student_store->GetListSize(); i++) {
-				   ListViewItem^ list_view_item = (gcnew ListViewItem());
-				   list_view_item->Tag = i;
-				   list_view_item->Text = "abc";
-				   /*
 				   this->student_list_view->Items->Add(gcnew String(data[i].GetName().c_str()));
 				   this->student_list_view->Items[i]->SubItems->Add("" + data[i].GetRollNumber());
-				   this->student_list_view->Items[i]->SubItems->Add("" + data[i].GetMarks());*/
-				   this->student_list_view->Items->Add(list_view_item);
+				   this->student_list_view->Items[i]->SubItems->Add("" + data[i].GetMarks());
 				   
 				   /*
 				   * Can also be done by creating a ListViewItem object and adding content to its subitems like:
