@@ -17,10 +17,15 @@ int main() {
         words_q.push(word);
     }
 
-     for (int i = 0; i < 8; i++) {
+    /* for (int i = 0; i < 8; i++) {
         std::cout << words_q.front() << " ";
         words_q.pop();
 
+    } */
+    
+    while(!words_q.empty()) {
+        std::cout << words_q.front() << " ";
+        words_q.pop();
     }
     std::cout << "\n";
 
